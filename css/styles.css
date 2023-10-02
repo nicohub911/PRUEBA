@@ -305,6 +305,7 @@ input[type=password]::-ms-clear {
   padding: 5px 27px;
   overflow: hidden;
   color: #000;
+  margin-right: -50px;
 }
 
 .icono2 {
