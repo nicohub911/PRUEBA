@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="nav_tag" class="navegador d-flex justify-content-between align-items-center position-fixed top-0 start-0 w-100 ">
+    <div class="navegador__menu_1 h-100 d-flex align-items-center">
+      <img class="h-75 ms-3" src="img/logo.png" alt="">
+      <div id="btn_nav_responsive" class="navegador__contenedor"><div class="navegador__contenedor__menu"></div></div>
+      <ul class="navegador__menu_1__lista mb-0">
+        <li class="navegador__menu_1__lista__elemento lineaDeAbajo me-5 pb-1"><a class="navegador__menu_1__lista__link" href="index.html">Inicio</a></li>
+        <li class="navegador__menu_1__lista__elemento lineaDeAbajo me-5 pb-1"><a class="navegador__menu_1__lista__link" href="categories.html">Categorias</a></li>
+        <li class="navegador__menu_1__lista__elemento lineaDeAbajo me-5 pb-1"><a class="navegador__menu_1__lista__link" href="sell.html">Vender</a></li>
+      </ul>
+    </div>
+    <div class="navegador__menu_2 d-flex align-items-center me-5">
+      <!-- Espacio dónde irán los botones de la derecha. -->
+    </div>
+  </nav>
+
+  <main class="min-vh-100 pt-5 ">
+    <div class="jumbotron text-center change"></div>
+    <div class="album py-5 bg-light change ">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-evenly mb-4">
+          <div id="autos" class="productCont position-relative rounded cursor-active m-1">
+            <div class="productCont__imgCont"><img src="img/cars_index.jpg" alt="Imgagen representativa de la categoría 'Autos'" class="productCont__imgCont__img position-absolute"></div> 
+            <div class="productCont__Cont position-absolute">
+                <div class="h-100 w-100 position-relative">
+                    <div class="productCont__Cont__slider w-100 d-flex flex-column">
+                        <div class="productCont__Cont__slider__slide_1 w-100 h-50 d-flex justify-content-center align-items-center">
+                            <h4 class="productCont__Cont__slider__slide_1__title position-absolute">Autos</h4>
+                        </div>
+                        <div class="productCont__Cont__slider__slide_2 w-100 h-50 d-flex justify-content-center align-items-center p-3">
+                            <p class="productCont__Cont__slider__slide_2__descripcion">Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="juguetes" class="productCont m-1 position-relative rounded cursor-active">
+            <div class="productCont__imgCont"><img src="img/toys_index.jpg" alt="Imgagen representativa de la categoría 'Juguetes'" class="productCont__imgCont__img position-absolute"></div> 
+            <div class="productCont__Cont position-absolute">
+                <div class="h-100 w-100 position-relative">
+                    <div class="productCont__Cont__slider w-100 d-flex flex-column">
+                        <div class="productCont__Cont__slider__slide_1 w-100 h-50 d-flex justify-content-center align-items-center">
+                            <h4 class="productCont__Cont__slider__slide_1__title position-absolute">Juguetes</h4>
+                        </div>
+                        <div class="productCont__Cont__slider__slide_2 w-100 h-50 d-flex justify-content-center align-items-center p-3">
+                            <p class="productCont__Cont__slider__slide_2__descripcion">Encuentra aquí los mejores precios para niños/as de cualquier edad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="muebles" class="productCont m-1 position-relative rounded cursor-active">
+            <div class="productCont__imgCont"><img src="img/furniture_index.jpg" alt="Imgagen representativa de la categoría 'Muebles'" class="productCont__imgCont__img position-absolute"></div> 
+            <div class="productCont__Cont position-absolute">
+                <div class="h-100 w-100 position-relative">
+                    <div class="productCont__Cont__slider w-100 d-flex flex-column">
+                        <div class="productCont__Cont__slider__slide_1 w-100 h-50 d-flex justify-content-center align-items-center">
+                            <h4 class="productCont__Cont__slider__slide_1__title position-absolute">Muebles</h4>
+                        </div>
+                        <div class="productCont__Cont__slider__slide_2 w-100 h-50 d-flex justify-content-center align-items-center p-3">
+                            <p class="productCont__Cont__slider__slide_2__descripcion">Muebles antiguos, nuevos y para ser armados por uno mismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a class="btn btn-light btn-lg btn-block mucho_mas change" href="categories.html">Y mucho más!</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted change">
+    <div class="container">
+      <p class="float-end">
+        <a class="link__footer" href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a class="link__footer" href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>
