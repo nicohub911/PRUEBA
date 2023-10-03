@@ -92,7 +92,7 @@ async function showProductInfo() {
 
 		</div>
 
-        <div class="producto_info__contenedor__informacion ps-5 p-3 change">
+        <div class="producto_info__contenedor__informacion change">
             <h1 class="producto_info__contenedor__informacion__titulo ">${objectProduct.name}</h1>
             <h2 class="producto_info__contenedor__informacion__precio "><span>${objectProduct.currency}</span> ${objectProduct.cost}</h2>
             <p class="producto_info__contenedor__informacion__descripcion "><b>Descripcion: </b>${objectProduct.description}</p>

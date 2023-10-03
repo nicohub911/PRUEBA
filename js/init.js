@@ -53,11 +53,14 @@ let getJSONData = function(url){
 
 // para el boton del nav movile
 nav_btn_responsive.addEventListener("click", ()=>{
+  const list = document.querySelector(".navegador__menu_1__lista");
   if (estado_nav) {
     estado_nav = false;
+    list.style.display = "none";
     nav_contenedor_general.style.height = "50px";
   } else {
     estado_nav = true;
+    list.style.display = "inline";
     nav_contenedor_general.style.height = "260px";
   }
 });
