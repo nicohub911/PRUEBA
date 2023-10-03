@@ -305,11 +305,12 @@ input[type=password]::-ms-clear {
   padding: 5px 27px;
   overflow: hidden;
   color: #000;
-  margin-left: 12px;
 }
 
 .icono2 {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .icono2::after {
