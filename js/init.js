@@ -8,7 +8,6 @@ const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 const nav_btn_responsive = document.getElementById("btn_nav_responsive");
 const nav_contenedor_general = document.getElementById("nav_tag");
-
 let estado_nav = false;
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
     window.location = "login.html"; // lo mando al login.
   }
 });
-
 
 let showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
@@ -72,8 +70,6 @@ window.addEventListener("resize", ()=>{
     nav_contenedor_general.style.height = "50px";
   }
 })
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
 // obtenemos el nombre de usuario que está en localStorage
@@ -135,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
 const themeChanger = ()=>{
   const divs = document.getElementsByClassName('change')
   for (const div of divs) {
-    
     div.classList.toggle('dark-light')
     if(div.classList.contains('jumbotron') && div.classList.contains('dark-light')){
       div.style.filter = "invert(90%)"
@@ -154,39 +149,20 @@ const themeChanger = ()=>{
         divs.classList.remove('dark-light')
     }
   }
-} 
+}
 
-
-
-
-/*
-  HOLA SOY NICOLAS. ESTE CODIGO ES POR SI LO QUIEREN HACER CON EL SESSION Y NO CON EL LOCAL.
-
-  document.addEventListener("DOMContentLoaded", () => {
-
-    if (localStorage.getItem("usuario") === null) { // compruebo si el local no tiene algun valor para usuario
-      mostrarUserName(sessionStorage.getItem("usuario"));
-    }else{   // de no ser asi le mando el del local.
-      mostrarUserName(localStorage.getItem("usuario"));
-    }
-
-  });
-
-  // la funcion modularizada para mostrar el nombre
-  function mostrarUserName(nombre) {
-  // obtenemos el div al que le vamos a agregar los tres botones (icono de perfil, nombre de usuario y carrito)
-  // como el metodo getElementsByClassName devuelve una lista espicificamos que vamos a trabajar solo con el primer elemento [0]
-    const parentDivs = document.getElementsByClassName("navegador__menu_2")[0];
-   
-  
-  // usando innerHTML con Template strings (tipo ${}) le ponemos el ya contenido de toda la sección con formato html
-    parentDivs.innerHTML = `
-      <a id="img_carrito" class="d-flex align-items-center me-3 rounded-circle" href="#"><img class="h-100" src="img/carrito.png" alt="carrito de compras"></a>
-      <a href="my-profile.html"><div class="navegador__menu_2__lista__link"><span id="data">${nombre}</span></div></a>
-      <a id="img_user" class="d-flex align-items-center rounded-circle" href="my-profile.html"><img class="h-100" src="img/user-Icon.png" alt="logo de usuario (menu de usuario)"></a>
-    `;
-  }
-
-  AGREGAR ESTO AL LOGIN EN LA PARTE DE LOGEARSE (EN LA DEL SESION): sessionStorage.setItem("usuario", `${user.value}`);
-
-*/
+function displayMessage(message, type){
+	const alertPlaceholder = document.getElementById('alert-placeholder');
+	const wrapper = document.createElement('div');
+	wrapper.innerHTML =
+    `<div class="alert alert-${type} alert-dismissible" role="alert" style="z-index:2000;">
+     <div>${message}</div>
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>`;
+	
+	alertPlaceholder.append(wrapper);
+	
+	 setTimeout(function () { 
+		alertPlaceholder.innerHTML = "";
+     }, 10000); 
+}

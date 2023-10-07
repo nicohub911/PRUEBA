@@ -1,0 +1,401 @@
+/*_______________producto_______________*/
+.modal-content {
+    background-color: #e9e9e9;
+    font-family: sans-serif;
+}
+
+.modal-header {
+    border-bottom: 4px solid #f09100;
+}
+
+.producto_info__contenedor__informacion__otros a {
+    text-decoration: none;
+    color: #ef9000;
+}
+
+#formNewComment {
+    min-width: 215px;
+    border-radius: 5px;
+    border: 2px solid #c4c4c4;
+    background-color: #c4c4c4;
+}
+
+#UI_comment {
+    outline: none;
+    padding: 10px;
+}
+
+#btnSubmit {
+    background-color: #f09100;
+    color: #3f4850;
+    width: 100px;
+    height: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid #3f4850;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#btnSubmit:hover {
+    color: #fff;
+    background-color: #3f4850;
+}
+
+#btnSubmit:active {
+    background-color: #f09100;
+}
+
+.product__coments__otrasOP {
+    width: 90%;
+    text-align: center;
+    border-top: 2px solid #f09100;
+}
+
+/* Estilos generales para pantalla grande */
+@media only screen and (min-width: 740px) {
+    #product_main {
+        display: flex;
+    }
+
+    #product_section {
+        width: 70%;
+    }
+
+    #aside_related {
+        top: 6vh;
+        flex-basis: 30%;
+        z-index: 0;
+    }
+
+    #product__info {
+        box-shadow: 0px 0px 5px #636363;
+        height: fit-content;
+        display: flex;
+        align-items: start;
+        border-radius: 3px;
+    }
+
+    .producto_info__contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .producto_info__contenedor__imgCont {
+        width: 50%;
+        min-width: 415px;
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .producto_info__contenedor__imgCont__imgprincipal {
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .producto_info__contenedor__imgCont__imgprincipal>img {
+        width: 100%;
+        transition: transform 0.2s;
+        cursor: pointer;
+    }
+
+    .producto_info__contenedor__imgCont img:hover {
+        transform: scale(1.4);
+    }
+
+
+    .producto_info__contenedor__informacion {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 5px;
+        flex: 2
+    }
+
+    .producto_info__contenedor__informacion__titulo {
+        text-align: center;
+        font-family: sans-serif;
+        letter-spacing: 5px;
+        padding-bottom: 8px;
+        border-bottom: 4px solid #f09100;
+    }
+
+    .producto_info__contenedor__informacion__precio {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: auto;
+    }
+
+    .producto_info__contenedor__informacion__precio span {
+        color: #1ba000;
+    }
+
+    .producto_info__contenedor__informacion__descripcion {
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 400px;
+        padding-top: 20px;
+        border-top: 2px solid #f09100;
+    }
+
+    .producto_info__contenedor__informacion__otros {
+        display: flex;
+        font-size: 16px;
+        justify-content: space-evenly;
+    }
+
+    /*____________comentarios____________*/
+    #product__coments {
+        min-height: 50vh;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px #636363;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*____________Estrellas____________*/
+    .rating-group {
+        display: inline-flex;
+    }
+
+    /* make hover effect work properly in IE */
+    .rating__icon {
+        pointer-events: none;
+    }
+
+    /* hide radio inputs */
+    .rating__input {
+        position: absolute !important;
+        left: -9999px !important;
+    }
+
+    /* hide 'none' input from screenreaders */
+    .rating__input--none {
+        display: none
+    }
+
+    /* set icon padding and size */
+    .rating__label {
+        cursor: pointer;
+        padding: 0 0.1em;
+        font-size: 2rem;
+    }
+
+    /* set default star color */
+    .rating__icon--star {
+        color: orange;
+    }
+
+    /* if any input is checked, make its following siblings grey */
+    .rating__input:checked~.rating__label .rating__icon--star {
+        color: #333333;
+    }
+
+    /* make all stars orange on rating group hover */
+    .rating-group:hover .rating__label .rating__icon--star {
+        color: orange;
+    }
+
+    /* make hovered input's following siblings grey on hover */
+    .rating__input:hover~.rating__label .rating__icon--star {
+        color: #333333;
+    }
+
+    /*____________relacionados____________*/
+    #related_products {
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px #303030;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/*_______________MOVILE_______________*/
+/* Estilos para dispositivos móviles*/
+@media only screen and (max-width: 740px) {
+    #product_main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #product__info {
+        box-shadow: 0px 0px 5px #636363;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .producto_info__contenedor {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .producto_info__contenedor__imgCont {
+        width: 100%;
+        text-align: center;
+    }
+
+    .producto_info__contenedor__imgCont__imgprincipal {
+        overflow: hidden;
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .producto_info__contenedor__imgCont__imgprincipal>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto_info__contenedor__imgCont__imgElegibles {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .producto_info__contenedor__imgCont__imgElegibles img {
+        width: 30%;
+        margin: 5px;
+    }
+
+    .producto_info__contenedor__informacion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .producto_info__contenedor__informacion__titulo {
+        text-align: center;
+        font-family: sans-serif;
+        letter-spacing: 5px;
+        color: #000;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #f09100;
+    }
+
+    .producto_info__contenedor__informacion__descripcion {
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 400px;
+        padding-top: 20px;
+        border-top: 2px solid #f09100;
+    }
+
+    .producto_info__contenedor__informacion__precio {
+        color: #000;
+        text-align: center;
+    }
+
+    .producto_info__contenedor__informacion__precio span {
+        color: #1ba000;
+        padding-left: 10px;
+    }
+
+    .producto_info__contenedor__informacion__otros {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #product__coments {
+        min-height: 50vh;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px #636363;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    #aside_related {
+        align-self: center;
+    }
+
+    #related_products {
+        margin-left: 0.1rem;
+        min-height: 50vh;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px #636363;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rating-group {
+        display: inline-flex;
+    }
+
+    /* make hover effect work properly in IE */
+    .rating__icon {
+        pointer-events: none;
+    }
+
+    /* hide radio inputs */
+    .rating__input {
+        position: absolute !important;
+        left: -9999px !important;
+    }
+
+    /* hide 'none' input from screenreaders */
+    .rating__input--none {
+        display: none
+    }
+
+    /* set icon padding and size */
+    .rating__label {
+        cursor: pointer;
+        padding: 0 0.1em;
+        font-size: 2rem;
+    }
+
+    /* set default star color */
+    .rating__icon--star {
+        color: orange;
+    }
+
+    /* if any input is checked, make its following siblings grey */
+    .rating__input:checked~.rating__label .rating__icon--star {
+        color: #333333;
+    }
+
+    /* make all stars orange on rating group hover */
+    .rating-group:hover .rating__label .rating__icon--star {
+        color: orange;
+    }
+
+    /* make hovered input's following siblings grey on hover */
+    .rating__input:hover~.rating__label .rating__icon--star {
+        color: #333333;
+    }
+
+    /* force product image to appear in cart.html when on mobile */
+    .cart__table__img {
+        min-width: 10vw;
+    }
+}
+
+.related_productos__contenedor__carta__link {
+    text-decoration: none;
+    color: #000;
+}
+
+.related_productos__contenedor__carta__link:hover {
+    color: #000;
+}
+
+.releated_products__contenedor__carta {
+    background-color: #e9e9e9;
+}

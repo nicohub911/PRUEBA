@@ -1,0 +1,79 @@
+/*-------------------------------------------------------CATEGORIES-------------------------------------------------------*/
+.productCont:hover .productCont__Cont__slider {
+    transform: translateY(-50%);
+}
+
+.productCont {
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.productCont__imgCont {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.productCont__imgCont__img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.productCont__Cont {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.productCont__Cont__slider {
+    top: 0px;
+    left: 0px;
+    height: 200%;
+    transition: transform 0.3s;
+    z-index: 3;
+}
+
+.productCont__Cont__slider__slide_1__title {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    z-index: 2;
+}
+
+.productCont__Cont__slider__slide_1__count {
+    width: 100%;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 20px;
+    margin-bottom: -80px;
+    z-index: 2;
+}
+
+.productCont__Cont__slider__slide_2__descripcion {
+    z-index: 2;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+#autos {
+    width: 350px;
+    height: 350px;
+}
+
+#juguetes {
+    width: 350px;
+    height: 350px;
+}
+
+#muebles {
+    width: 350px;
+    height: 350px;
+}

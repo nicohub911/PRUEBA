@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -25,12 +26,96 @@
     <div class="navegador__menu_2 d-flex align-items-center me-5">
      </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+  
+  <div id="alert-placeholder"></div>
+  
+  <main class="pb-5 min-vh-100 change" >
+    <div class="text-center p-4 mt-5">
+      <h2>Mí carrito</h2>
     </div>
+    <div class="container d-flex justify-content-evenly flex-wrap p-1 "> 
+		<div class="table-responsive w-100">
+			<table class="table table-hover table-bordered table-striped my-2">
+				<caption>Productos en su carrito</caption>
+				<thead>
+					<tr>
+					<th scope="col"></th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Costo</th>
+					<th scope="col">Cantidad</th>
+					<th scope="col" class="text-end">Subtotal</th>
+					</tr>
+				</thead>
+				<tbody id="cart-table-body">
+					<!-- articles in cart will be listed here / aquí se mostrarán los articulos del carrito -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+  <!-- contenedor para formulario de tipo y datos de envío -->
+  <div class="container" id="form-carrito">
+    <form>
+      <fieldset>
+        <legend>Tipo de envío</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoEnvio" id="premium" value="premium" checked>
+          <label class="form-check-label" for="premium">
+            Premium 2 a 5 días (15%)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoEnvio" id="express" value="express">
+          <label class="form-check-label" for="express">
+            Express 5 a 8 días (7%)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoEnvio" id="standard" value="standard">
+          <label class="form-check-label" for="standard">
+            Standard 12 a 15 días (5%)
+          </label>
+        </div>
+      </fieldset>
+      <br>
+  
+      <fieldset>
+        <legend>Dirección de envío</legend>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" class="form-control" required>
+          </div>
+          <div class="form-group col">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="esquina">Esquina:</label>
+          <input type="text" id="esquina" name="esquina" class="form-control">
+        </div>
+      </fieldset>
+      <div id="contenedorCompra">
+      <small id="parrafoObservaciones">
+        Haz clic <a href="#" id="mostrarObservaciones">aquí</a> para agregar observaciones.
+      </small>
+      </div>
+      <fieldset style="display: none;" id="campoObservaciones">
+        <br>
+        <legend>Observaciones</legend>
+        <div class="form-group">
+          <label for="observaciones">Escribe tus observaciones:</label>
+          <textarea id="observaciones" name="observaciones" class="form-control"></textarea>
+        </div>
+        <div id="botonesObservaciones">
+        <button id="guardarObservaciones">Guardar</button>
+        <p id="cancelarObservaciones"> <a href="#">Cancelar</a></p>
+        </div>
+      </fieldset>
+      <button type="submit" id="buttonform">Continuar</button>
+    </form>
+  </div>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -48,6 +133,7 @@
       <div></div>
     </div>
   </div>
+
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
